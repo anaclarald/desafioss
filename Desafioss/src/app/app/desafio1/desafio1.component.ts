@@ -11,6 +11,10 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class Desafio1Component {
   formGroup!: FormGroup;
+  pesquisar() {window.location.href = 'www.google.com.br/search?q='+
+  this.formGroup.controls['text'].value;
+  }
+
 
   ngOnInit() {
     this.formGroup = new FormGroup({
